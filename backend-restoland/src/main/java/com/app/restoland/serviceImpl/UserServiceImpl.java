@@ -102,7 +102,6 @@ public class UserServiceImpl implements IUserService {
         }catch (Exception ex){
             ex.printStackTrace();
         }
-
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

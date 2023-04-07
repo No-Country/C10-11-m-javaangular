@@ -7,6 +7,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@NamedQuery(name = "Category.findByName", query = "select c from Category c where c.name=:name")
 @NamedQuery(name = "Category.getAllCategory", query = "select c from Category c")
 
 @Data
