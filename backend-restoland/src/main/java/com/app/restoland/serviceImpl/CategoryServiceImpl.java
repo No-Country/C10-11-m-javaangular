@@ -80,10 +80,11 @@ public class CategoryServiceImpl implements ICategoryService {
 
     private boolean validateCategoryMap(Map<String, String> requestMap, boolean validateId) {
         if(requestMap.containsKey("name")){
-            if(requestMap.containsKey("id")){
+            if(requestMap.containsKey("id") && validateId){
+                return true;
+            }else if(!validateId){
                 return true;
             }
-            return true;
         }
         return false;
     }
