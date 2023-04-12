@@ -143,6 +143,11 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public User getOne(Long id) {
+        return userDAO.getOne(id);
+    }
+
+    @Override
     public ResponseEntity<String> updateRole(Map<String, String> requestMap) {
          try {
              if(jwtFilter.isAdmin()){

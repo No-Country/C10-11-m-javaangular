@@ -1,5 +1,6 @@
 package com.app.restoland.service;
 
+import com.app.restoland.POJO.User;
 import com.app.restoland.wrapper.UserWrapper;
 import org.springframework.http.ResponseEntity;
 
@@ -21,4 +22,6 @@ public interface IUserService {
     ResponseEntity<String> changePassword(Map<String, String> requestMap);
 
     ResponseEntity<String> forgotPassword(Map<String, String> requestMap);
+
+    User getOne(Long id);
 }
